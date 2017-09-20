@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<!--[if lt IE 9]>
+	  	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif]-->
+		
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<!-- Navigation bar style -->
+    	<title> Filipe Bicho - Software Developer </title>
+    	<link rel="icon" type="image/png" href="images/icons/logo_bar.png"/>
+
+    	 <!-- Reset stylesheet is to reduce browser inconsistencies -->
+		<link rel="stylesheet" type="text/css" href="CSS/reset.css">
+		<link rel="stylesheet" type="text/css" href="CSS/mainStyle.css">
+		<link rel="stylesheet" type="text/css" href="CSS/aboutMeStyle.css">
+
+		<!-- Get JavaScript file -->
+		<script type="text/javascript" src="JS/myJavaScript.js"></script> 
+	
+		<!-- angularJS Library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+		<!-- fontStyle from google api -->
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7COpen+Sans:800i" rel="stylesheet">
+
+	</head>
+	<body onload="checkBrowser()">
+		
+	<!-- Navigation menu -->
+	<nav id="header" >
+		<!-- Personal logo -->
+		<img id="personal_logo" src="images/icons/logo.png" alt="personal_logo">
+		<!-- Navigation Menu -->
+		<ul class="menu" id="id_menu">
+			<li><a href="home.html">Home </a></li>
+			<li id="active_button"><a href="aboutMe.html">About me 			</a></li>
+			<li><a href="projects.html">Projects			</a></li>
+			<li><a href="bachelor.html">Bachelor			</a></li>
+			<li><a href="contact.html">Contact				</a></li>	
+		</ul>
+		<!-- Menu button in responsive menu -->
+		<div class="menu_icon" onclick="toggle_menu(this)">
+			<div class="barra1"></div>
+			<div class="barra2"></div>
+			<div class="barra3"></div>
+		</div>
+	</nav>
+
+	<div id="content" onscroll="menuEffect()">
+		<!-- About me title -->
+		<h1 id="aboutMe_title"> Filipe Bicho </h1>
+		<!-- About me text -->
+		<div id="aboutMe_text">
+			<p> I am a <span style="color: #E13636">Software Developer</span> based in Luzern, Switzerland, with a deep interest in new technologies and coding.</p>
+			<p> In the last 4 years I have studied Computer Science in a public distance learning university based in Portugal, <span style="color: #E13636">"Universidade Aberta"</span>,	where I learned almost everything I know about informatics, Mathematics and projects manegement.</p>
+			<p> After I start learning how to code I got deeply interested to know how everything works, I love a good challenge. </p>
+			<p> Lately I got interested in <u style="color: #E13636">web developer</u>, focusing mainly on Style and Responsive Web Design.</p>
+			<p> I always strive to write efficient and elegant code.</p>
+		</div>
+
+		<!-- Timeline -->
+		<section class="timeline">
+			<hr style="border: 4px solid  #E13636; margin-top: 0%;">
+			<ul>
+				<li>
+					<img class="timeline_img" src="images/about_me/born.png" alt="born">
+					<span onclick="show_hide('born')">29/09/1987</span>
+					<div id="born">
+						<img class="text_img" src="images/about_me/abrantes.jpg" alt="Abrantes">
+						The day my story began.<br> I was born in Abrantes, which is a small town in the middle of Portugal.<br>
+						Here I lived with my grandmother until the age of 18.
+					</div>
+				</li>
+				<li>
+					<img class="timeline_img" src="images/about_me/school.png" alt="school">
+					<span onclick="show_hide('school')">09/2007</span>
+					<div id="school">
+						<img class="text_img" src="images/about_me/lisbon.jpg" alt="Lisbon">
+						In september 2007 I moved to Lisbon to complete secondary school in a professional preparatory school with a focus of Computer Science.<br>
+						Here I had my first lights of the Computer Science world. 
+					</div>
+				</li>
+				<li>
+					<img class="timeline_img" src="images/about_me/kitchen.png" alt="school">
+					<span onclick="show_hide('kitchen')">12/2008</span>
+					<div id="kitchen">
+						<img class="text_img" src="images/about_me/saasfee.jpg" alt="Lisbon">
+						In the winter of 2008 I moved to a tourist village called Saas-Fee in Switzerland to work as a kitchen helper.<br>
+						I stayed in Saas-Fee till the end of April, 2017.
+					</div>
+				</li>
+				<li>
+					<img class="timeline_img" src="images/about_me/university.png" alt="school">
+					<span onclick="show_hide('degree')">09/2013</span>
+					<div id="degree">
+						<img class="text_img" src="images/about_me/uab.jpg" alt="Lisbon">
+						In 2013, I decided to look for a better future.<br>
+						I signed up for the degree of Computer Science in the "Universidade Aberta".<br>
+						In the next 4 years, I worked and studied at the same time.
+					</div>
+				</li>
+				<li>
+					<img class="timeline_img" src="images/about_me/language.png" alt="school">
+					<span onclick="show_hide('german')">09/2016</span>
+					<div id="german">
+						<img class="text_img" src="images/about_me/bern.jpg" alt="Bern">
+						In 2016 summer, I moved to Bern in Switzerland for 3 months.<br>
+						In this time I did an intensive german course.
+					</div>
+				</li>
+				<li>
+					<img class="timeline_img" src="images/about_me/diploma.png" alt="diploma">
+					<span onclick="show_hide('diploma')">07/2017</span>
+					<div id="diploma">
+						<img class="text_img" src="images/about_me/luzern.jpg" alt="Luzern">
+						In summer 2017, I completed my bachelor in Computer Science.<br>
+						After one month, I moved to Lucerne to find my first opportunity as Software Developer.
+					</div>
+				</li>
+			</ul>
+
+		</section>	<!-- End time line -->
+
+		<!-- Download section -->
+		<div id="downloads">
+			<hr style="border: 4px solid  #E13636; margin-top: -3%;" >
+			<h2 >Downloads </h2>
+
+			<button onclick="location.href='downloads/cv.pdf'" type="button">
+     			<span id="cv">CV</span>
+     		</button>
+     		<br>
+     		<button onclick="location.href='downloads/diplome.pdf'" type="button">
+     			<span id="bachelor">Diplome</span>
+     		</button>
+     		<br>
+     		<button onclick="location.href='downloads/zertifikat.pdf'" type="button">
+     			<span id="germanCV">Zertifikat</span>
+     		</button>
+     		<br>
+     		<button onclick="location.href='downloads/arbeitszeugnis.pdf'" type="button">
+     			<span id="arbeitszeugnis">Arbeitszeugnis</span>
+     		</button>
+   		<div style="height: 50px"></div>
+    
+		</div>
+		
+	</div>
+
+	<div id="progress" style="display: none;">
+  		<div id="bar"></div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		<!-- LinkedIn -->
+		<a href="https://ch.linkedin.com/in/filipe-bicho-7a668bb4">
+			<img id="linkedIn" src="images/icons/linkedin.png" alt="linkedIn" >
+		</a>
+		<!-- GitHub -->
+		<a href="https://github.com/FilipeBicho">
+			<img id="github" src="images/icons/github.png" alt="GitHub" >
+		</a>
+		<!-- Contact -->
+		<a href="mailto:mail@filipebicho.com?Subject=Hello%20again" target="_top">
+			<img id="contact_icon" src="images/icons/contact.png" alt="contact" >
+		</a>
+	</div>
+
+
+	</body>
+</html>

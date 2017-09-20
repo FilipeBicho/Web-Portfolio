@@ -1,0 +1,442 @@
+body{
+	background-image: url('../images/backgrounds/background_aboutMe.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+}
+
+/* About me title style */
+#aboutMe_title{
+	font-family: 'Abril Fatface', cursive;
+	font-size: 80px;					/* will increase to 80px */
+	margin-top: 3%;					/* will change to 3% */
+	margin-left: 3%;
+	color: #E13636;		/* red */
+	text-shadow: 5px 8px 4px rgba(0,0,0,0.4),
+                 2px 8px 10px rgba(0,0,0,0.15),
+                 2px 15px 2px rgba(0,0,0,0.4),
+                 2px 30px 30px rgba(0,0,0,0.4);
+}
+
+/* About me text style */
+#aboutMe_text{
+	width: 80%;									
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;									
+	font-size: 25px;
+	color: white;								
+	padding: 3px 20px 3px 20px;
+	margin: 2% 0% 0% 3%;
+	border-left: 3px solid white;
+	border-bottom: 3px solid white;
+	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+   -webkit-border-radius: 12px; 
+   -moz-border-radius: 12px; 
+    border-radius: 5px 30px 5px;
+    background: rgba(0,0,0,0.95); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(to right,rgba(0,0,0,0.5), rgba(0,0,0,0.95)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(to right,rgba(0,0,0,0.5), rgba(0,0,0,0.95)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(to right,rgba(0,0,0,0.5), rgba(0,0,0,0.95)); /*Fx 3.6-15*/
+	background: linear-gradient(to right,rgba(0,0,0,0.5), rgba(0,0,0,0.95)); 
+}
+
+/*timeline section background and margins */
+.timeline{
+	background-image:url('../images/about_me/timeline.jpg'); 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+	margin: 5% 0% 3%;
+}
+
+/* timeline position */
+.timeline ul{
+	position: relative;
+	padding-bottom: 30px;
+}
+
+/* line in timeline style */
+.timeline ul li {
+	position: relative;
+	width: 6px;			/* width of line */
+	list-style-type: none;
+	margin: 0 auto;
+	padding-top: 50px;
+	background: #E13636;
+}
+
+/* create the image of each event */
+.timeline_img {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 30px;
+	width: 60px;
+	height: 60px;
+	background: inherit;
+	z-index: 1;
+	border: 4px solid #E13636;
+	-webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+    border-radius: 50%;
+	-ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+/* style time */
+.timeline ul li span{
+	position: relative;
+	width: 400px;
+	padding: 4px 0px 4px 0px;
+	font-family: Papyrus, fantasy;
+	font-size: 20px;
+	color: white;
+	background-color: #E13636;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* style time */
+.timeline ul li span:hover{
+	-ms-transform: scaleY(1.2);
+    -webkit-transform: scaleY(1.2);
+    transform: scaleY(1.2);
+}
+
+/* style time */
+.timeline ul li span:active{
+	-ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+}
+
+/* odd time position */	
+.timeline ul li:nth-child(odd) span {
+	left: 75px;
+}
+
+/* even time position */	
+.timeline ul li:nth-child(even) span {
+	left: -469px;
+}
+
+/* arrow in time */
+.timeline ul li span::before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+/* odd time arrow */
+.timeline ul li:nth-child(odd) span::before {
+	left: -28px;
+	border-width: 14px 28px 14px 0;
+	border-color: transparent #E13636 transparent transparent;
+}
+
+/* even time arrow */
+.timeline ul li:nth-child(even) span::before {
+	right: -28px;
+	border-width: 14px 0 14px 28px;
+	border-color: transparent transparent transparent #E13636;
+}
+
+/* style the text content */
+.timeline ul li div {
+	position: relative;
+	width: 400px;
+	padding: 10px;
+	top: 3px;
+	font-family: "Times new Roman";	
+	background-color: white;
+	color: black;
+	opacity: 0;
+	display: none;
+}
+.timeline ul li div img {
+	width: 100%;
+	height: 50%;
+}
+
+/* odd text position */
+.timeline ul li:nth-child(odd) div {
+	left: 75px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* even text position */
+.timeline ul li:nth-child(even) div {
+	left: -469px;
+	box-shadow: -10px 10px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* hide downloads section */
+#downloads{
+	background-image:url('../images/backgrounds/background_downloads.jpg'); 
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+
+/* Download title */
+#downloads h2{
+	font-size: 50px;
+	text-decoration: underline;
+	margin: 3% 0% 1% 3%;
+	font-family: 'Abril Fatface', cursive;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+    color: #202020;
+}
+
+/* download button style */
+#downloads button{
+	height: 90px;
+	width: 250px;
+  	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding: 0px 5px;
+	margin: 10px 2%;				
+	background-color: rgba(255,255,255,0.5);
+	-webkit-border-radius:40px;
+   -moz-border-radius: 40px;
+    border-radius: 40px;
+  	text-decoration: none;
+  	cursor: pointer;
+  	-webkit-transition: 0.5s ease;
+            transition: 0.5s ease;
+}
+
+/* download button style */
+#downloads button:hover{
+  	text-decoration: underline;
+  	background-color: rgba(100,100,100,0.8);
+  	-webkit-box-shadow: 10px 10px 10px rgba(0,0,0,0.8);
+    -moz-box-shadow: 10px 10px 10px rgba(0,0,0,0.8);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.8);
+    border-bottom: 2px solid black;
+}
+
+/* download button style */
+#downloads button:active{
+  	transform: translate(5px, 5px);
+  	-webkit-transform: translate(5px, 5px);
+  	-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+    -moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
+}
+
+/* align button text */
+#downloads button span{
+	line-height: 90px;
+	vertical-align: middle;
+}
+
+#downloads button span::before{
+	line-height: 90px;
+	vertical-align: middle;
+	width: 70px;
+	height: 70px;
+	padding-top: 10px;
+	float: left;
+	bottom: 10px;
+}
+
+#downloads button span#cv::before{
+	content: url(../images/about_me/cv.png);
+}
+#downloads button span#bachelor::before{
+	content: url(../images/about_me/bachelor.png);
+}
+#downloads button span#germanCV::before{
+	content: url(../images/about_me/german.png);
+}
+#downloads button span#arbeitszeugnis::before{
+	content: url(../images/about_me/arbeitszeugnis.png);
+}
+
+
+/* --------------------------------------------- Responsive CSS --------------------------------------------------------------*/
+
+@media all and (max-width: 1024px) {
+
+	/* change position and size of time box */
+	.timeline ul li span{
+		width: 300px;
+	}
+
+	/* change position and size of text box */
+	.timeline ul li div{
+		width: 300px;	
+	}
+
+	/* even text position */
+	.timeline ul li:nth-child(even) div {
+		left: -369px;
+	}
+
+	/* even time position */	
+	.timeline ul li:nth-child(even) span {
+		left: -369px;
+	}
+}
+
+@media all and (max-width: 925px) {
+	body{
+		background-image: url('../images/backgrounds/background_aboutMe_mobile.jpg');
+		background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+
+	}
+}
+
+/* -------------------------------------------- Mobile ------------------------------------------------------------------*/ 
+@media all and (max-width: 768px) {
+
+	/* align text in the center */
+	#aboutMe_title{
+		text-align: center;
+	}
+
+	/* change text margins, hide borders and increase width */
+	#aboutMe_text{
+		margin-left: 2%;
+		margin-top: 5%;
+		border: 0px;
+		width: 95%;
+	}
+
+	/* line goes to the left */
+	.timeline ul li {
+   		margin-left: 40px;
+  	}
+ 
+	/* even time position */	
+	.timeline ul li:nth-child(even) span {
+		left: 75px;
+	}
+
+	/* even time arrow */
+	.timeline ul li:nth-child(even) span::before {
+		left: -28px;
+		border-width: 14px 28px 14px 0;
+		border-color: transparent #E13636 transparent transparent;
+	}
+
+	/* even text position */
+	.timeline ul li:nth-child(even) div {
+		left: 75px;
+	}
+	#downloads{
+		background-image:url('../images/backgrounds/background_downloads_mobile.jpg'); 
+		background-size: cover;
+	}
+
+	/* download button style */
+	#downloads button{
+		height: 90px;
+		width: 200px;
+		font-size: 15px;
+	}
+
+}
+
+@media all and (max-width: 580px) {
+
+	#aboutMe_title{
+		font-size: 70px;
+	}
+
+	/* change text margins, hide borders and increase width */
+	#aboutMe_text{
+		font-size: 20px;
+		background: rgba(0,0,0,0.95); /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(to left,rgba(0,0,0,0.5), rgba(0,0,0,0.95)); /*Safari 5.1-6*/
+		background: -o-linear-gradient(to left,rgba(0,0,0,0.5), rgba(0,0,0,0.95)); /*Opera 11.1-12*/
+		background: -moz-linear-gradient(to left,rgba(0,0,0,0.5), rgba(0,0,0,0.95)); /*Fx 3.6-15*/
+		background: linear-gradient(to left,rgba(0,0,0,0.5), rgba(0,0,0,0.95)); 	
+	}
+	.timeline{
+		 background-size:auto auto;
+	}
+
+	/* change position and size of images */
+	.timeline_img{
+		top: 20px;
+		width: 50px;
+		height: 50px;
+	}
+
+	/* change position and size of time box */
+	.timeline ul li span{
+		top: -20px;
+		width: 260px;
+		font-size: 20px;
+	}
+
+	/* change position and size of text box */
+	.timeline ul li div{
+		top: -17px;
+		width: 260px;	
+	}
+
+}
+
+@media all and (max-width: 400px) {
+
+	#aboutMe_title{
+		font-size: 60px;
+	}
+
+	/* change size of images */
+	.timeline_img{
+		width: 40px;
+		height: 40px;
+	}
+
+	/* change size of time box */
+	.timeline ul li span{
+		width: 180px;
+		font-size: 17px;
+	}
+
+	/* change size of text box */
+	.timeline ul li div{
+		width: 180px;
+	}
+
+	/* odd time arrow */
+	.timeline ul li:nth-child(odd) span::before {
+		left: -24px;
+		border-width: 12px 24px 12px 0;
+	}
+
+	/* even time arrow */
+	.timeline ul li:nth-child(even) span::before {
+		left: -24px;
+		border-width: 12px 24px 12px 0;
+	}
+
+	/* Download title */
+	#downloads h2{
+	font-size: 40px;
+	text-decoration: underline;
+	margin: 3% 0% 1% 3%;
+	font-family: 'Abril Fatface', cursive;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+	}
+}

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<!--[if lt IE 9]>
+	  	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif]-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<!-- Navigation bar style -->
+    	<title> Filipe Bicho - Software Developer </title>
+    	<link rel="icon" type="image/png" href="images/icons/logo_bar.png"/>
+
+    	 <!-- Reset stylesheet is to reduce browser inconsistencies -->
+		<link rel="stylesheet" type="text/css" href="CSS/reset.css">
+		<link rel="stylesheet" type="text/css" href="CSS/mainStyle.css">
+		<link rel="stylesheet" type="text/css" href="CSS/projectsStyle.css">
+
+		<!-- Get JavaScript file -->
+		<script type="text/javascript" src="JS/myJavaScript.js"></script> 
+		<script type="text/javascript" src="JS/links.json"></script> 
+	
+		<!-- angularJS Library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+		<!-- fontStyle from google api -->
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7COpen+Sans:800i" rel="stylesheet">
+
+	</head>
+	<body onload="projectEffects()">
+		
+	<!-- Navigation menu -->
+	<nav id="header" >
+		<!-- Personal logo -->
+		<img id="personal_logo" src="images/icons/logo.png" alt="personal_logo">
+		<!-- Navigation Menu -->
+		<ul class="menu" id="id_menu">
+			<li><a href="home.html">Home </a></li>
+			<li><a href="aboutMe.html">About me 			</a></li>
+			<li id="active_button"><a href="projects.html">Projects			</a></li>
+			<li><a href="bachelor.html">Bachelor			</a></li>
+			<li><a href="contact.html">Contact				</a></li>	
+		</ul>
+		<!-- Menu button in responsive menu -->
+		<div class="menu_icon" onclick="toggle_menu(this)">
+			<div class="barra1"></div>
+			<div class="barra2"></div>
+			<div class="barra3"></div>
+		</div>
+	</nav>
+
+	<div id="content">
+	<!-- Content -->
+	<div class="projects_menu" >
+  		<!-- Resume Web Page -->
+		<div class="module" id="resumeMod">
+			<img src="images/projects/resume.png" alt="resume">
+			<div>  
+				<h2>Resume Web Page</h2>  
+				<p>Web page to show my Resume and the Probability Poker<br><br>
+				HTML, CSS and JavaScript </p>  
+				<a class="info" href="http://filipebicho.16mb.com/webPage/resume.html" >WebPage</a>  
+				<span class="info" onclick="openBox('resume_id')">Source Code</span>
+			</div>  
+		</div>
+
+		<!-- Final Project -->
+		<div class="module" id="finalMod">
+			<img src="images/projects/final_project.png" alt="project">
+			<div>  
+				<h2>Final Project</h2>  
+				<p>Head's Up Texas Hold'em Simulation<br><br>
+				Java Project with graphic interface</p>  
+				<a  class="info" href="source_code/final_project/poker.rar">Download</a>  
+				<span class="info" onclick="openBox('project_id')">Source Code</span>
+			</div>  
+		</div>
+
+		<!-- Probability Poker Game -->
+		<div class="module" id="probMod">
+			<img src="images/projects/probability_poker.png" alt="poker">
+			<div>  
+				<h2>Probability Poker</h2>  
+				<p>Probability game based on Heads Up<br><br>
+				Java Project with graphic interface</p>  
+				<a class="info" href="source_code/poker/Prob_Poker.rar">Download</a>  
+				<span class="info" onclick="openBox('poker_id')">Source Code</span>
+			</div>  
+		</div>
+		<!-- Benfica Web Page -->
+		<div class="module" id="benficaMod">
+			<img src="images/projects/first_webPage.png" alt="benfica">
+			<div>  
+				<h2>First Web Page</h2>  
+				<p>First School Web Page <br><br>
+				HTML and CSS</p>  
+				<a class="info" href="http://filipebch.esy.es/1300531_Filipe_Bicho_efolioA/paginaInicial.html" >WebPage</a>  
+				<span class="info" onclick="openBox('benfica_id')">Source Code</span>
+			</div>  
+		</div>
+		<!-- Portugal Travel -->
+		<div class="module" id="portugalMod">
+			<img src="images/projects/hotel.png" alt="hotel">
+			<div>  
+				<h2>Portugal travel</h2>  
+				<p>Program where you can register and evaluate hotels and restaurants<br><br>
+				School C++ Project </p>  
+				<a class="info" href="source_code/travel/PortugalTravel.rar">Download</a>  
+				<span class="info" onclick="openBox('travel_id')">Source Code</span>
+			</div>  
+		</div>
+		<!-- 2D Computer Graphics -->
+		<div class="module" id="cg1Mod">
+			<img src="images/projects/cg1.png" alt="cg1">
+			<div>  
+				<h2>2D Program</h2>  
+				<p>Java Program working with openGL(Open Graphics Library)<br><br>
+				School Java/CG Program </p>  
+				<span class="info" style="float: right; margin-right: 15%" onclick="openBox('cg1_img_id')">Result</span>  
+				<span class="info" onclick="openBox('cg1_id')">Source Code</span>
+			</div>  
+		</div>
+		<!-- 3D Computer Graphics -->
+		<div class="module" id="cg2Mod">
+			<img src="images/projects/cg2.png" alt="cg2">
+			<div >  
+				<h2>3D Program</h2>  
+				<p>Java Program working with openGL(Open Graphics Library)<br><br>
+				School Java/CG Program </p>  
+				<span class="info" style="float: right; margin-right: 15%" onclick="openBox('cg2_img_id')">Result</span>  
+				<span class="info" onclick="openBox('cg2_id')">Source Code</span>
+			</div>  
+		</div>
+			<div style="height: 500px"></div>
+	</div>
+
+	<!-- Resume -->
+	<div class="source_code" id="resume_id">
+		<h2>Resume Code</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('resume_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- Open & Close menu just in mobile -->
+		<span class="open_menu" id="open_menu_resume" onclick="openPages_menu('resume_id')">
+			&#9776;
+		</span>
+		<span class="close_menu" id="close_menu_resume" onclick="closePages_menu('resume_id')">
+			&#x2718;
+		</span>
+
+		<!-- Resume Source code menu -->
+		<ul id="mobile_resume">
+			<li id="resume_menu_id">
+				<span onclick="openCode('resume_id','resume_code_id');">
+					resume.html
+				</span>
+			</li>
+			<li id="rules_menu_id">
+				<span onclick="openCode('resume_id','rules_code_id');">
+					rules.html
+				</span>
+			</li>
+			<li id="code_menu_id">
+				<span onclick="openCode('resume_id','code_code_id');">
+					code.html
+				</span>
+			</li>
+			<li id="play_menu_id">
+				<span onclick="openCode('resume_id','play_code_id');">
+					play.html
+				</span>
+			</li>
+			<li id="contact_menu_id">
+				<span onclick="openCode('resume_id','contact_code_id');">
+					contact.php
+				</span>
+			</li>
+			<li id="mail_menu_id">
+				<span onclick="openCode('resume_id','mail_code_id');">
+					mail.php
+				</span>
+			</li>
+			<li id="css_menu_id">
+				<span onclick="openCode('resume_id','css_code_id');">
+					styleCSS.css
+				</span>
+			</li>
+			<li id="js_menu_id">
+				<span onclick="openCode('resume_id','js_code_id');">
+					java.js
+				</span>
+			</li>
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<iframe id="resume_code_id"></iframe>
+			<iframe id="rules_code_id"></iframe>
+			<iframe id="code_code_id"></iframe>
+			<iframe id="play_code_id"></iframe>
+			<iframe id="contact_code_id"></iframe>
+			<iframe id="mail_code_id"></iframe>
+			<iframe id="css_code_id"></iframe>
+			<iframe id="js_code_id"></iframe>
+		</div>
+	</div>
+
+	<!-- Final Project -->
+	<div class="source_code" id="project_id">
+		<h2>Final Project Code</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('project_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- Open & Close menu just in mobile -->
+		<span class="open_menu" id="open_menu_project" onclick="openPages_menu('project_id')">
+			&#9776;
+		</span>
+		<span class="close_menu" id="close_menu_project" onclick="closePages_menu('project_id')">
+			&#x2718;
+		</span>
+
+		<!-- Final Project Source code menu -->
+		<ul id="mobile_project">
+			<li id="cartas_menu_id">
+				<span onclick="openCode('project_id','cartas_code_id');">
+					Cards
+				</span>
+			</li>
+			<li id="baralho_menu_id">
+				<span onclick="openCode('project_id','baralho_code_id');">
+					Deck
+				</span>
+			</li>
+			<li id="dealer_menu_id">
+				<span onclick="openCode('project_id','dealer_code_id');">
+					Dealer
+				</span>
+			</li>
+			<li id="avaliar_menu_id">
+				<span onclick="openCode('project_id','avaliar_code_id');">
+					Evaluate
+				</span>
+			</li>
+			<li id="vencedor_menu_id">
+				<span onclick="openCode('project_id','vencedor_code_id');">
+					CalcWinner
+				</span>
+			</li>
+			<li id="apostas_menu_id">
+				<span onclick="openCode('project_id','apostas_code_id');">
+					Bets
+				</span>
+			</li>
+			<li id="probabilidades_menu_id">
+				<span onclick="openCode('project_id','probabilidades_code_id');">
+					Odds
+				</span>
+			</li>
+			<li id="simulador_menu_id">
+				<span onclick="openCode('project_id','simulador_code_id');">
+					Simulation
+				</span>
+			</li>
+			<li id="jogar_menu_id">
+				<span onclick="openCode('project_id','jogar_code_id');">
+					Play
+				</span>
+			</li>
+			<li id="estatisticas_menu_id">
+				<span onclick="openCode('project_id','estatisticas_code_id');">
+					Statistics
+				</span>
+			</li>
+			<li id="interface_menu_id">
+				<span onclick="openCode('project_id','interface_code_id');">
+					Interface
+				</span>
+			</li>
+			<li id="main_menu_id">
+				<span onclick="openCode('project_id','main_code_id');">
+					Main
+				</span>
+			</li>
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<iframe id="cartas_code_id"></iframe>
+			<iframe id="baralho_code_id"></iframe>
+			<iframe id="dealer_code_id"></iframe>
+			<iframe id="avaliar_code_id"></iframe>
+			<iframe id="vencedor_code_id"></iframe>
+			<iframe id="apostas_code_id"></iframe>
+			<iframe id="probabilidades_code_id"></iframe>
+			<iframe id="simulador_code_id"></iframe>
+			<iframe id="jogar_code_id"></iframe>
+			<iframe id="estatisticas_code_id"></iframe>
+			<iframe id="interface_code_id"></iframe>
+			<iframe id="main_code_id"></iframe>			
+		</div>
+	</div>
+
+	<!-- Probability Poker Game -->
+	<div class="source_code" id="poker_id">
+		<h2>Probability Game Code</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('poker_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- Open & Close menu just in mobile -->
+		<span class="open_menu" id="open_menu_poker" onclick="openPages_menu('poker_id')">
+			&#9776;
+		</span>
+		<span class="close_menu" id="close_menu_poker" onclick="closePages_menu('poker_id')">
+			&#x2718;
+		</span>
+
+		<!-- Probability Poker code menu -->
+		<ul id="mobile_poker">
+			<li id="cards_menu_id">
+				<span onclick="openCode('poker_id','cards_code_id');">
+					Cards
+				</span>
+			</li>
+			<li id="deck_menu_id">
+				<span onclick="openCode('poker_id','deck_code_id');">
+					Deck
+				</span>
+			</li>
+			<li id="dealer2_menu_id">
+				<span onclick="openCode('poker_id','dealer2_code_id');">
+					Dealer
+				</span>
+			</li>
+			<li id="evaluate_menu_id">
+				<span onclick="openCode('poker_id','evaluate_code_id');">
+					Hand Evaluation
+				</span>
+			</li>
+			<li id="bets_menu_id">
+				<span onclick="openCode('poker_id','bets_code_id');">
+					Bets
+				</span>
+			</li>
+			<li id="applet_menu_id">
+				<span onclick="openCode('poker_id','applet_code_id');">
+					Poker Applet
+				</span>
+			</li>
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<iframe id="cards_code_id"></iframe>
+			<iframe id="deck_code_id"></iframe>
+			<iframe id="dealer2_code_id"></iframe>
+			<iframe id="evaluate_code_id"></iframe>
+			<iframe id="bets_code_id"></iframe>
+			<iframe id="applet_code_id"></iframe>
+		</div>
+	</div>
+
+	<!-- Benfica Web Page -->
+	<div class="source_code" id="benfica_id">
+		<h2>Probability Game Code</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('benfica_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- Open & Close menu just in mobile -->
+		<span class="open_menu" id="open_menu_benfica" onclick="openPages_menu('benfica_id')">
+			&#9776;
+		</span>
+		<span class="close_menu" id="close_menu_benfica" onclick="closePages_menu('benfica_id')">
+			&#x2718;
+		</span>
+
+		<!-- Benfica Web Page code menu -->
+		<ul id="mobile_benfica">
+			<li id="inicio_menu_id">
+				<span onclick="openCode('benfica_id','inicio_code_id');">
+					inicio.html
+				</span>
+			</li>
+			<li id="plantel_menu_id">
+				<span onclick="openCode('benfica_id','plantel_code_id');">
+					plantel.html
+				</span>
+			</li>
+			<li id="class_menu_id">
+				<span onclick="openCode('benfica_id','class_code_id');">
+					class.html
+				</span>
+			</li>
+			<li id="historia_menu_id">
+				<span onclick="openCode('benfica_id','historia_code_id');">
+					historia.html
+				</span>
+			</li>
+			<li id="galeria_menu_id">
+				<span onclick="openCode('benfica_id','galeria_code_id');">
+					galeria.html
+				</span>
+			</li>
+			<li id="estilo_menu_id">
+				<span onclick="openCode('benfica_id','estilo_code_id');">
+					estilo.css
+				</span>
+			</li>
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<iframe id="inicio_code_id"></iframe>
+			<iframe id="plantel_code_id"></iframe>
+			<iframe id="class_code_id"></iframe>
+			<iframe id="historia_code_id"></iframe>
+			<iframe id="galeria_code_id"></iframe>
+			<iframe id="estilo_code_id"></iframe>
+		</div>
+	</div>
+
+	<!-- C++ Source code mobile menu -->
+	<div class="source_code" id="travel_id">
+		<h2>C++ Project</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('travel_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- Open & Close menu just in mobile -->
+		<span class="open_menu" id="open_menu_travel" onclick="openPages_menu('travel_id')">
+			&#9776;
+		</span>
+		<span class="close_menu" id="close_menu_travel" onclick="closePages_menu('travel_id')">
+			&#x2718;
+		</span>
+
+		<!-- C++ Source code menu -->
+		<ul id="mobile_travel">
+			<li id="lista_menu_id">
+				<span onclick="openCode('travel_id','lista_code_id');">
+					Lista.h
+				</span>
+			</li>
+			<li id="uti_h_menu_id">
+				<span onclick="openCode('travel_id','uti_h_code_id');">
+					Utilizador.h
+				</span>
+			</li>
+			<li id="uti_cpp_menu_id">
+				<span onclick="openCode('travel_id','uti_cpp_code_id');">
+					Utilizador.cpp
+				</span>
+			</li>
+			<li id="hotel_h_menu_id">
+				<span onclick="openCode('travel_id','hotel_h_code_id');">
+					Hotel.h
+				</span>
+			</li>
+			<li id="hotel_cpp_menu_id">
+				<span onclick="openCode('travel_id','hotel_cpp_code_id');">
+					Hotel.cpp
+				</span>
+			</li>
+			<li id="rest_h_menu_id">
+				<span onclick="openCode('travel_id','rest_h_code_id');">
+					Rest.h
+				</span>
+			</li>
+			<li id="rest_cpp_menu_id">
+				<span onclick="openCode('travel_id','rest_cpp_code_id');">
+					Rest.cpp
+				</span>
+			</li>
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<iframe id="lista_code_id"></iframe>
+			<iframe id="uti_h_code_id"></iframe>
+			<iframe id="uti_cpp_code_id"></iframe>
+			<iframe id="hotel_h_code_id"></iframe>
+			<iframe id="hotel_cpp_code_id"></iframe>
+			<iframe id="rest_h_code_id"></iframe>
+			<iframe id="rest_cpp_code_id"></iframe>
+		</div>
+	</div>
+
+	<!-- 2D project -->
+	<div class="source_code" id="cg1_id">
+		<h2>CG - 2D Program</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('cg1_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- Open & Close menu just in mobile -->
+		<span class="open_menu" id="open_menu_cg1" onclick="openPages_menu('cg1_id')">
+			&#9776;
+		</span>
+		<span class="close_menu" id="close_menu_cg1" onclick="closePages_menu('cg1_id')">
+			&#x2718;
+		</span>
+
+		<!-- 2D Project code menu -->
+		<ul id="mobile_cg1">
+			<li id="cg1_menu_id">
+				<span onclick="openCode('cg1_id','cg1_code_id');">
+					CG.java
+				</span>
+			</li>
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<iframe id="cg1_code_id"></iframe>
+		</div>
+	</div>
+
+	<!-- 2D project Output-->
+	<div class="source_code" id="cg1_img_id">
+		<h2>CG - 2D Program</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('cg1_img_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- 2D project Output-->
+		<ul>
+			<li>
+				<span>
+					Output
+				</span>
+			</li>
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<embed src="source_code/CG/cg1.png"  style="width: 100%; height: auto">
+		</div>
+	</div>
+
+	<!-- 3D project -->
+	<div class="source_code" id="cg2_id">
+		<h2>CG - 3D Program</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('cg2_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- Open & Close menu just in mobile -->
+		<span class="open_menu" id="open_menu_cg2" onclick="openPages_menu('cg2_id')">
+			&#9776;
+		</span>
+		<span class="close_menu" id="close_menu_cg2" onclick="closePages_menu('cg2_id')">
+			&#x2718;
+		</span>
+
+		<!-- 3D project code menu -->
+		<ul id="mobile_cg2">
+			<li id="cg2_menu_id">
+				<span onclick="openCode('cg2_id','cg2_code_id');">
+					CG.java
+				</span>
+			</li>
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<iframe id="cg2_code_id"></iframe>
+		</div>
+	</div>
+
+	<!-- 3D project Output-->
+	<div class="source_code" id="cg2_img_id">
+		<h2>CG - 3D Program</h2>
+		<img src="images/projects/close.png" alt="close" onclick="closeBox('cg2_img_id')">
+		<hr style="border: 1px solid  rgba(255,255,255,0.3); margin-top: 1%;">
+
+		<!-- 3D project Output-->
+		<ul>
+			<li >
+				<span >
+					Output
+				</span>
+			</li>
+
+		</ul>
+
+		<!-- Section to show source code -->
+		<div class="code">
+			<embed src="source_code/CG/cg2.gif"  style="width: 100%; height: auto">
+		</div>
+	</div>
+		
+
+	</div>
+
+	<div id="progress">
+  		<div id="bar"></div>
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		<!-- LinkedIn -->
+		<a href="https://ch.linkedin.com/in/filipe-bicho-7a668bb4">
+			<img id="linkedIn" src="images/icons/linkedin.png" alt="linkedIn" >
+		</a>
+		<!-- GitHub -->
+		<a href="https://github.com/FilipeBicho">
+			<img id="github" src="images/icons/github.png" alt="GitHub" >
+		</a>
+		<!-- Contact -->
+		<a href="mailto:mail@filipebicho.com?Subject=Hello%20again" target="_top">
+			<img id="contact_icon" src="images/icons/contact.png" alt="contact" >
+		</a>
+	</div>
+
+</body>
+</html>

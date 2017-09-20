@@ -1,0 +1,360 @@
+/* include padding and border in total height and width of elements */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+   	padding: 0px;
+}
+/* edit scrollbar on Chrome and Safari*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background: rgba(255,255,255,0.4); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: rgba(0,0,0,0.5); 
+}
+p{
+	display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Navigation menu */
+nav#header{
+	position: fixed;
+	width: 100%;
+	height: 55px;
+	background-color: rgba(255,0,0,0.5);
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    z-index: 1;
+}
+
+/* personal logo size and margins*/
+#personal_logo{
+	height: 45px;
+	margin-top: 5px;
+	margin-left: 5%;
+}
+
+/* list without style at the right  */
+ul.menu {
+	list-style-type: none;
+	margin-right:6%;
+	float: right;
+}
+
+/* list at left with shadow */
+ul.menu li {
+    
+ 	float: left;
+ 	-webkit-transition:  box-shadow 0.3s ease-in-out;
+    -moz-transition:  box-shadow 0.3s ease-in-out;
+    -o-transition:  box-shadow 0.3s ease-in-out;
+    transition:  box-shadow 0.3s ease-in-out;
+    -webkit-transition:  transform 0.3s ease-in-out;
+    -moz-transition:  transform 0.3s ease-in-out;
+    -o-transition:  transform 0.3s ease-in-out;
+    transition:  transform 0.3s ease-in-out;
+}
+
+/* add shadow on hover */
+ul.menu li:hover{
+    -webkit-box-shadow: 10px 0px 10px rgba(0,0,0,0.4), -10px 0px 10px rgba(0,0,0,0.4);
+    -moz-box-shadow: 10px 0px 10px rgba(0,0,0,0.4), -10px 0px 10px rgba(0,0,0,0.4);
+    box-shadow: 10px 0px 10px rgba(0,0,0,0.4), -10px 0px 10px rgba(0,0,0,0.4);
+}
+
+/* add shadow on hover */
+ul.menu li:active{
+   	-ms-transform: scale(0.9); /* IE 9 */
+    -webkit-transform: scale(0.9); /* Safari */
+    transform: scale(0.9);
+     -webkit-box-shadow: 5px 0px 5px rgba(0,0,0,0.4), 5px 0px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 0px 5px rgba(0,0,0,0.4), -5px 0px 5px rgba(0,0,0,0.4);
+    box-shadow: 5px 0px 5px rgba(0,0,0,0.4), 5px 0px 5px rgba(0,0,0,0.4);
+}
+
+/* style link in each list element */
+ul.menu li a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+  	padding: 18px 16px;
+  	text-decoration: none;
+  	font-size: 20px;
+  	font-family: Tahoma, Geneva, sans-serif;
+  	-webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* scale on hover */
+ul.menu li a:hover{
+	-ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari */
+    transform: scale(1.2);
+}
+
+/* scale on cliking */
+ul.menu li a:active{
+	-ms-transform: scale(0.9); /* IE 9 */
+    -webkit-transform: scale(0.9); /* Safari */
+    transform: scale(0.9);
+}
+
+/* background when page is active*/
+#active_button{
+	background-image:url('../images/icons/active_button.png');
+	background-size: cover;
+	background-size: 100% 100%;
+}
+
+/* responsive list at the left */
+ul.menu.responsive{
+	display:inline;
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+    overflow-y: auto;
+	overflow-x: hidden;
+}
+
+/* list display horizontally */
+ul.menu.responsive li{
+	display: block;
+	height: 50px;
+	float: none;
+	margin-top: 30px;
+	-webkit-transition: height 0.6s ease-out;
+    -moz-transition: height 0.6s ease-out;
+    -o-transition: height 0.6s ease-out;
+    transition: height 0.6s ease-out;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+/* list elements in the center */
+ul.menu.responsive li a {
+    display: block;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 20px;
+}
+
+/* style and hide menu button */
+.menu_icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+   	top: 10px;
+   	left: 14px;
+}
+
+/* create menu button */
+.barra1, .barra2, .barra3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* rotate first bar */
+.mudar .barra1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* hide second bar */
+.mudar .barra2 {
+	opacity: 0;
+}
+
+/* rotate third bar */
+.mudar .barra3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* content layout position, size, background and transition */
+#content{
+	position: fixed;
+	top: 55px;
+	width: 100%;
+	height: calc(100% - 90px); /* 100% - header - footer */
+    background-size: cover;	
+  	-webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    overflow-y: auto;
+    z-index: -1;
+}
+
+/* footer position and size */
+#footer{
+	position: fixed;
+	bottom: 0px;
+	height: 35px;
+	width: 100%;
+	background-color: rgba(255,0,0,0.5);
+	-webkit-transition: right 0.4s ease;
+    -moz-transition: right 0.4s ease;
+    -o-transition: right 0.4s ease;
+    transition: right 0.4s ease;
+    z-index: 1;
+}
+
+/* logos on the left, size and radius */
+#linkedIn, #github{
+	height: 100%;
+	width: 35px;
+	margin-left: 20px;
+   -webkit-border-radius: 10px; 
+   -moz-border-radius: 10px; 
+   border-radius: 12px; 
+}
+
+/* contact logo on the right, size and radius */
+#contact_icon{
+	height: 35px;
+	width: auto;
+	float: right;
+	margin-right: 20px;
+}
+
+/* increase size on hover */
+#linkedIn:hover, #github:hover, #contact_icon:hover{
+	transform: scale(1.1);
+}
+
+/* decrease size on mouse down */
+#linkedIn:active, #github:active, #contact_icon:active{
+	transform: scale(0.8);
+}
+/* Page with full heigth */
+.fullHeigth{
+	height: calc(100vh - 90px);
+	overflow-y: auto;
+}
+
+#progress {
+  width: 100%;
+  bottom: 0px;
+  position: fixed;
+}
+
+#bar {
+  width: 1%;
+  height: 0px;
+  background-color: rgba(204, 0, 0, 0.6);;
+
+}
+
+
+/* --------------------------------------------- Responsive CSS --------------------------------------------------------------*/
+
+@media all and (max-width: 1024px) {
+	/* decrease menu right margin */
+	ul.menu {
+		margin-right:4%;
+	}
+	/* decrease menu right padding and font */
+	ul.menu li a {
+	  	padding-right: 12px;
+	  	font-size: 18px;
+	}
+	/* personal logo size and margins*/
+	#personal_logo{
+		height: 40px;
+		margin-top: 8px;
+		margin-left: 3%;
+	}
+}
+
+/* --------------------------------------------- Mobile CSS -------------------------------------------------------------------*/
+
+@media all and (max-width: 768px) {
+
+	/* hide menu */
+	ul.menu {
+		display: none	
+	}
+
+	/* change logo to the right */
+	#personal_logo{
+		float: right;
+		margin-right: 6%;
+	}
+	
+	/* show responsive menu button */
+	.menu_icon {
+	    display: block;
+	}
+
+}
+
+@media all and (max-width: 580px) {
+
+	/* Decrease header size */
+	nav#header{
+		height: 45px;
+	}
+	/* personal logo size and margins*/
+	#personal_logo{
+		height: 35px;
+		margin-top: 6px;
+	}
+
+	/* show responsive menu button */
+	.menu_icon {
+	    top: 6px;
+	}
+	/* create menu button */
+	.barra1, .barra2, .barra3 {
+	    width: 30px;
+	    height: 4px;
+	}
+	/* content layout position, size, background and transition */
+	#content{
+		top: 45px;
+		height: calc(100% - 80px); /* 100% - header - footer */
+	}
+
+}
+
+/* ----------------------------------------------------- Landscape ---------------------------------------------------------*/
+
+@media all and (max-height: 550px) {
+	/* list display horizontally */
+	ul.menu.responsive li{
+		height: 35px;
+		margin-top: 8px;
+	}
+	/* list elements in the center */
+	ul.menu.responsive li a {
+	    padding: 10px 6px;
+	    font-size: 15px;
+	}
+}
+
+@media all and (max-height: 350px) {
+
+
+	/* responsive list at the left */
+	ul.menu.responsive{
+		margin-top: 15px;
+	}
+}

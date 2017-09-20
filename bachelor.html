@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<!--[if lt IE 9]>
+	  	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif]-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<!-- Navigation bar style -->
+    	<title> Filipe Bicho - Software Developer </title>
+    	<link rel="icon" type="image/png" href="images/icons/logo_bar.png"/>
+		<!-- angularJS Library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    	 <!-- Reset stylesheet is to reduce browser inconsistencies -->
+		<link rel="stylesheet" type="text/css" href="CSS/reset.css">
+		<link rel="stylesheet" type="text/css" href="CSS/mainStyle.css">
+		<link rel="stylesheet" type="text/css" href="CSS/bachelorStyle.css">
+
+		<!-- Get JavaScript file -->
+		<script type="text/javascript" src="JS/myJavaScript.js"></script> 
+
+		<!-- fontStyle from google api -->
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7COpen+Sans:800i" rel="stylesheet">
+
+	</head>
+	<body >
+		
+	<!-- Navigation menu -->
+	<nav id="header" >
+		<!-- Personal logo -->
+		<img id="personal_logo" src="images/icons/logo.png" alt="personal_logo">
+		<!-- Navigation Menu -->
+		<ul class="menu" id="id_menu">
+			<li><a href="home.html">Home </a></li>
+			<li><a href="aboutMe.html">About me 			</a></li>
+			<li><a href="projects.html">Projects			</a></li>
+			<li id="active_button"><a href="bachelor.html">Bachelor			</a></li>
+			<li><a href="contact.html">Contact				</a></li>	
+		</ul>
+		<!-- Menu button in responsive menu -->
+		<div class="menu_icon" onclick="toggle_menu(this)">
+			<div class="barra1"></div>
+			<div class="barra2"></div>
+			<div class="barra3"></div>
+		</div>
+	</nav>
+
+	<div id="content">
+		<!-- Side menu -->
+		<table id="side_menu">
+			<tr><td id="uni_logo" onclick="moveTo(this)"><img  src="images/bachelor/uni_logo.png" alt="uni"></td>
+			<tr><td id="cs_logo" onclick="moveTo(this)"><img  src="images/bachelor/cs_logo.png" alt="cs"></td></tr>
+			<tr><td id="grades_logo" onclick="moveTo(this)"><img  src="images/bachelor/grade_logo.png" alt="grade"></td></tr>
+		</table>
+
+		<!-- First Section -->
+		<div class="section" id="uab_section">
+			<table id="uab_table" >
+				<tr><td>Universidade</td></tr>
+				<tr><td id="uab_title" >Aberta</td></tr>
+				<tr><td><a href="http://portal.uab.pt/" target="_blank">uab.pt</a></td></tr>
+			</table>
+
+			<img class="arrow" onclick="moveRight('uab_section')" src="images/bachelor/right.gif" alt="right">
+		</div>
+
+		<div class="section" id="uab_text">
+			<!-- Uab text -->
+			<div class="text">
+				<p >Founded in 1988, an Open University (UAb) is a public higher education institution in Portugal.</p>
+				<p>By its vocation and nature, UAb uses in its teaching activities the most advanced distance education methodologies and technologies geared towards education without geographical boundaries or physical barriers, and with a special focus on the expansion of the Portuguese language and culture in space Of Lusofonia (migrant communities and Portuguese-speaking countries).</p>
+				<p>Thus, the UAb provides, anywhere in the world, higher education (bachelors, masters and doctorates) and Lifelong Learning courses. The entire pedagogical offer is integrated into the Bologna Process and taught in elearning, since 2008, the year in which the UAb has become a leading European institution in the advanced field of elearning and online learning, through the recognition of its Model Virtual Pedagogical.</p>
+				<p>In 2010, the elearning model developed and practiced by UAb was awarded the EFQUEL Award - European Foundation for Quality in Elearning and UNIQUe - The Quality Label for the use of ICT in Higher Education (Universities and Institutes). In the same year, the UAb was also qualified as the reference institution for teaching in elearning in Portugal by an international panel of independent experts.</p>
+				<p>Under the European scheme of Levels of Excellence, the European Foundation for Quality Management (EFQM) distinguished the UAb in 2011 with the 1st Level of Excellence Committed to Excellence (C2E). In 2016, UAb's commitment to quality was recognized by EFQM, which distinguished 4-star University in the 2nd Level of Excellence Recognized for Excellence (R4E).</p>
+			</div>
+			<img class="arrow" onclick="moveLeft('uab_text')" src="images/bachelor/left.gif" alt="left">
+			<img class="arrow" onclick="moveRight('uab_text')" src="images/bachelor/right.gif" alt="right">
+		</div>
+
+		<!-- CS section -->
+		<div class="section" id="cs_section">
+			<table id="cs_table" >
+				<tr><td><span class="first_letter">C</span>omputer</td></tr>
+				<tr><td><span class="first_letter">S</span>cience</td></tr>
+			</table>
+			<img class="arrow" onclick="moveLeft('cs_section')" src="images/bachelor/left.gif" alt="left">
+			<img class="arrow" onclick="moveRight('cs_section')" src="images/bachelor/right.gif" alt="right">
+		</div>
+
+		<div class="section" id="cs_text">
+			<!-- Uab text -->
+			<div class="text">
+				<p >Computer science is the study of computers and computing concepts. It includes both hardware and software, as well as networking and the Internet.</p>
+				<p>The hardware aspect of computer science overlaps with electrical engineering. It covers the basic design of computers and the way they work. A fundamental understanding of how a computer "computes," or performs calculations, provides the foundation for comprehending more advanced concepts. For example, understanding how a computer operates in binary allows you to understand how computers add, subtract, and perform other operations. Learning about logic gates enables you to make sense of processor architecture.</p>
+				<p>The software side of computer science covers programming concepts as well as specific programming languages. Programming concepts include functions, algorithms, and source code design. Computer science also covers compilers, operating systems, and software applications. User-focused aspects of computer science include computer graphics and user interface design.</p>
+				<p>Since nearly all computers are now connected to the Internet, the computer science umbrella covers Internet technologies as well. This includes Internet protocols, telecommunications, and networking concepts. It also involves practical applications, such as web design and network administration.</p>
+			</div>
+			<img class="arrow" onclick="moveLeft('cs_text')" src="images/bachelor/left.gif" alt="left">
+			<img class="arrow"  onclick="moveRight('cs_text')" src="images/bachelor/right.gif" alt="right">
+		</div>	
+		<script src="JS/myJavaScript.js"></script>
+		<!-- Grades Showcase section -->
+		<div class="section" id="grades_section">
+
+			<div style="overflow-y: auto; height: 100%">
+			<!-- Title -->
+			<h1>Bachelor grades</h1>
+
+			<div data-ng-app="grades" data-ng-controller="myGrades">
+				
+				<table id="search_table">
+					<tr>
+						<td><img src="images/bachelor/search.png" alt="search"></td>
+						<td><input type="text" placeholder="Search for a subject..." data-ng-model="nameFilter"></td>
+				
+						<td><input type="text" id="search_grade" placeholder="Search for a grade..." data-ng-model="gradeFilter"></td>
+					</tr>
+					<tr>
+						<td><td><input type="text" id="search_mobile" placeholder="Search for a grade..." data-ng-model="gradeFilter"></td>
+					</tr>
+				</table>
+
+				<!-- Showcase all bachelor's degree subject grades -->
+				<table id="grades_table">
+					<tr>
+						<th data-ng-click="sortBy('name')" >Name</th>
+						
+						<th data-ng-click="sortBy('grade')">Grade (0 - 20)</th>
+					
+					</tr>
+					<tr data-ng-repeat="grade in grades | orderBy:propertyName:reverse | filter:nameFilter | filter: gradeFilter">
+						<td>{{ grade.name }}</td>
+						<td>{{ grade.grade }}</td>
+						</tr>
+				</table>
+				</div>		
+			</div>
+
+			<img class="arrow" onclick="moveLeft('grades_section')" src="images/bachelor/left.gif" alt="left">
+		</div>
+		
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		<!-- LinkedIn -->
+		<a href="https://ch.linkedin.com/in/filipe-bicho-7a668bb4">
+			<img id="linkedIn" src="images/icons/linkedin.png" alt="linkedIn" >
+		</a>
+		<!-- GitHub -->
+		<a href="https://github.com/FilipeBicho">
+			<img id="github" src="images/icons/github.png" alt="GitHub" >
+		</a>
+		<!-- Contact -->
+		<a href="mailto:mail@filipebicho.com?Subject=Hello%20again" target="_top">
+			<img id="contact_icon" src="images/icons/contact.png" alt="contact" >
+		</a>
+	</div>
+
+
+	</body>
+</html>
