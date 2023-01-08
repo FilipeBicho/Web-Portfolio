@@ -218,7 +218,7 @@ ul.menu.responsive li a {
 }
 
 /* logos on the left, size and radius */
-#linkedIn, #github{
+#linkedIn, #github, #xing{
 	height: 100%;
 	width: 35px;
 	margin-left: 20px;
@@ -236,12 +236,12 @@ ul.menu.responsive li a {
 }
 
 /* increase size on hover */
-#linkedIn:hover, #github:hover, #contact_icon:hover{
+#linkedIn:hover, #github:hover, #xing:hover, #contact_icon:hover{
 	transform: scale(1.1);
 }
 
 /* decrease size on mouse down */
-#linkedIn:active, #github:active, #contact_icon:active{
+#linkedIn:active, #github:active, #xing:active, #contact_icon:active{
 	transform: scale(0.8);
 }
 /* Page with full heigth */

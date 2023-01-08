@@ -3,10 +3,9 @@
     $first_name = $_POST['first'];
     $last_name = $_POST['last'];
     $from = $_POST['mail']; 
-    $message = $_POST['message'];
 
     $subject = "Email from filipebicho.com";
-    $message = "Message from " . $first_name . " " . $last_name . ":" . "\n\n" . $message;
+    $message = "Message from " . $first_name . " " . $last_name . ":" . "\n\n" . $_POST['message'];
     $thanks = "Thank you " . $first_name . " " . $last_name . " for getting in touch!";
     $headers = "From:" . $from;
     mail($to,$subject,$message,$headers);

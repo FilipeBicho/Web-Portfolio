@@ -1,102 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta charset="utf-8">
-		<!--[if lt IE 9]>
-	  	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<![endif]-->
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<meta charset="utf-8">
+			<!--[if lt IE 9]>
+		  	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<![endif]-->
+	    	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    	<!-- Navigation bar style -->
-    	<title> Filipe Bicho - Software Developer </title>
-    	<link rel="icon" type="image/png" href="images/icons/logo_bar.png"/>
+	    	<!-- Navigation bar style -->
+	    	<title> Filipe Bicho - Software Developer </title>
+	    	<link rel="icon" type="image/png" href="images/icons/logo_bar.png"/>
 
-    	 <!-- Reset stylesheet is to reduce browser inconsistencies -->
-		<link rel="stylesheet" type="text/css" href="CSS/reset.css">
-		<link rel="stylesheet" type="text/css" href="CSS/mainStyle.css">
-		<link rel="stylesheet" type="text/css" href="CSS/contactStyle.css">
+	    	 <!-- Reset stylesheet is to reduce browser inconsistencies -->
+			<link rel="stylesheet" type="text/css" href="CSS/reset.css">
+			<link rel="stylesheet" type="text/css" href="CSS/mainStyle.css">
+			<link rel="stylesheet" type="text/css" href="CSS/contactStyle.css">
 
-		<!-- Get JavaScript file -->
-		<script type="text/javascript" src="JS/myJavaScript.js"></script> 
-	
-		<!-- angularJS Library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
-		<!-- fontStyle from google api -->
-		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7COpen+Sans:800i" rel="stylesheet">
-
-	</head>
-	<body data-ng-app="" onload = "googleMaps()">
+			<!-- Get JavaScript file -->
+			<script type="text/javascript" src="JS/myJavaScript.js"></script> 
 		
-	<!-- Navigation menu -->
-	<nav id="header" >
-		<!-- Personal logo -->
-		<img id="personal_logo" src="images/icons/logo.png" alt="personal_logo">
-		<!-- Navigation Menu -->
-		<ul class="menu" id="id_menu">
-			<li><a href="home.html">Home </a></li>
-			<li><a href="aboutMe.html">About me 			</a></li>
-			<li><a href="projects.html">Projects			</a></li>
-			<li><a href="bachelor.html">Bachelor			</a></li>
-			<li id="active_button"><a href="contact.html">Contact</a></li>	
-		</ul>
-		<!-- Menu button in responsive menu -->
-		<div class="menu_icon" onclick="toggle_menu(this)">
-			<div class="barra1"></div>
-			<div class="barra2"></div>
-			<div class="barra3"></div>
+			<!-- angularJS Library -->
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+			<!-- fontStyle from google api -->
+			<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7COpen+Sans:800i" rel="stylesheet">
+
+			<!-- google reCAPTCHA v3-->
+			 <script src="https://www.google.com/recaptcha/api.js"></script>
+
+
+		</head>
+		<body data-ng-app="" onload = "googleMaps()">
+			
+		<!-- Navigation menu -->
+		<nav id="header" >
+			<!-- Personal logo -->
+			<img id="personal_logo" src="images/icons/logo.png" alt="personal_logo">
+			<!-- Navigation Menu -->
+			<ul class="menu" id="id_menu">
+				<li><a href="home.html">Home </a></li>
+				<li><a href="aboutMe.html">About me 			</a></li>
+				<li><a href="projects.html">Projects			</a></li>
+				<li><a href="bachelor.html">Bachelor			</a></li>
+				<li id="active_button"><a href="contact.html">Contact</a></li>	
+			</ul>
+			<!-- Menu button in responsive menu -->
+			<div class="menu_icon" onclick="toggle_menu(this)">
+				<div class="barra1"></div>
+				<div class="barra2"></div>
+				<div class="barra3"></div>
+			</div>
+		</nav>
+
+		<div id="content">
+
+			<h1> Contact me</h1>
+			<h2> Looking forward to hearing from you </h2>
+			
+			<!-- Form and Google Maps -->
+			<table>	
+				<tr>
+					<td>
+						<div id="formStyle">
+						  <form method="post" name="contactForm" id="contactForm" action="mail.php" >
+						    <input type="text" name="first" placeholder="First Name.." autofocus data-ng-model="first" required/>
+						    <input type="text" name="last" placeholder="Last Name.." data-ng-model="last" required/>
+						    <input type="email" name="mail" placeholder="Email.." data-ng-model="mail" required/>
+						    <textarea name="message" placeholder="Write your message here.." data-ng-model="message" required></textarea>
+						    <input data-ng-disabled="contactForm.$invalid" type="submit" class="g-recaptcha" data-sitekey="6LemJU4aAAAAALCDFsgef_3jRw_7vw9cHmU5Xstw" data-callback='onSubmit'  name="button" />
+						  </form>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="googleMap"></div>
+					</td>
+				</tr>
+			</table>
+			
+		<div style="height: 30px"></div>
 		</div>
-	</nav>
 
-	<div id="content">
+		<!-- Footer -->
+		<div id="footer">
+			<!-- LinkedIn -->
+			<a href="https://ch.linkedin.com/in/filipe-bicho-7a668bb4">
+				<img id="linkedIn" src="images/icons/linkedin.png" alt="linkedIn" >
+			</a>
+			<!-- GitHub -->
+			<a href="https://github.com/FilipeBicho">
+				<img id="github" src="images/icons/github.png" alt="GitHub" >
+			</a>
+			<!-- Xing -->
+			<a href="https://www.xing.com/profile/Filipe_Bicho?sc_o=mxb_p">
+				<img id="xing" src="images/icons/xing.png" alt="Xing" >
+			</a>
+			<!-- Contact -->
+			<a href="mailto:mail@filipebicho.com?Subject=Hello%20again" target="_top">
+				<img id="contact_icon" src="images/icons/contact.png" alt="contact" >
+			</a>
+		</div>
 
-		<h1> Contact me</h1>
-		<h2> Looking forward to hearing from you </h2>
-		
-		<!-- Form and Google Maps -->
-		<table>	
-			<tr>
-				<td>
-					<div id="formStyle">
-					  <form method="post" name="contactForm" action="mail.php" >
-					    <input type="text" name="first" placeholder="First Name.." autofocus data-ng-model="first" required/>
-					    <input type="text" name="last" placeholder="Last Name.." data-ng-model="last" required/>
-					    <input type="email" name="mail" placeholder="Email.." data-ng-model="mail" required/>
-					    <textarea name="message" placeholder="Write your message here.." data-ng-model="message" required></textarea>
-					    <input data-ng-disabled="contactForm.$invalid " type="submit" name="message" value="Submit" />
-					  </form>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div id="googleMap"></div>
-				</td>
-			</tr>
-		</table>
-
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBftMJqD7YLeN-36nyr7w0dZEIusaTfHug&callback=initialize"></script>
-		
-	<div style="height: 30px"></div>
-	</div>
-
-	<!-- Footer -->
-	<div id="footer">
-		<!-- LinkedIn -->
-		<a href="https://ch.linkedin.com/in/filipe-bicho-7a668bb4">
-			<img id="linkedIn" src="images/icons/linkedin.png" alt="linkedIn" >
-		</a>
-		<!-- GitHub -->
-		<a href="https://github.com/FilipeBicho">
-			<img id="github" src="images/icons/github.png" alt="GitHub" >
-		</a>
-		<!-- Contact -->
-		<a href="mailto:mail@filipebicho.com?Subject=Hello%20again" target="_top">
-			<img id="contact_icon" src="images/icons/contact.png" alt="contact" >
-		</a>
-	</div>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBftMJqD7YLeN-36nyr7w0dZEIusaTfHug" type="text/javascript"></script>
 
 
-	</body>
-</html>
+		<script>
+		   function onSubmit(token) {
+		     document.getElementById("contactForm").submit();
+		   }
+		 </script>
+		</body>
+	</html>
