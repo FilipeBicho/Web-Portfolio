@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/filipebch/public_html/
     - /bin/cp -r public_html $DEPLOYPATH/
+    - /bin/cp -r tailwind $DEPLOYPATH/
