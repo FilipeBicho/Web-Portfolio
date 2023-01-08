@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/filipebch/public_html/
+    - export DEPLOYPATH=/home/filipebch/
     - /bin/cp -R public_html $DEPLOYPATH/
     - /bin/cp -R tailwind $DEPLOYPATH/
