@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--[if lt IE 9]>
+	  	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif]--><meta name="viewport" content="width=device-width, initial-scale=1"><!-- Navigation bar style -->
+	<title>Filipe Bicho - Software Developer</title>
+	<link href="images/icons/logo_bar.png" rel="icon" type="image/png" /><!-- Reset stylesheet is to reduce browser inconsistencies -->
+	<link href="CSS/reset.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/mainStyle.css" rel="stylesheet" type="text/css" />
+	<link href="CSS/homeStyle.css" rel="stylesheet" type="text/css" /><!-- Get JavaScript file --><script type="text/javascript" src="JS/myJavaScript.js"></script><!-- angularJS Library --><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script><!-- fontStyle from google api -->
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7COpen+Sans:800i" rel="stylesheet" />
+	<link rel="stylesheet" href="./css/tailwind.css">
+</head>
+<body onload="homeEffects()"><!-- Navigation menu -->
+<nav id="header"><!-- Personal logo --><img alt="personal_logo" id="personal_logo" src="images/icons/logo.png" /> <!-- Navigation Menu -->
+<ul class="menu" id="id_menu">
+	<li id="active_button"><a href="home.html">Home </a></li>
+	<li><a href="aboutMe.html">About me </a></li>
+	<li><a href="projects.html">Projects </a></li>
+	<li><a href="bachelor.html">Bachelor </a></li>
+	<li><a href="contact.html">Contact </a></li>
+</ul>
+<!-- Menu button in responsive menu -->
+
+<div class="menu_icon" onclick="toggle_menu(this)">
+<div class="barra1"></div>
+
+<div class="barra2"></div>
+
+<div class="barra3"></div>
+</div>
+</nav>
+
+<div id="content" onscroll="running()">
+<h1 class="title" id="homePageTitle">Hello World!</h1>
+
+<div id="intro">
+<p>My name is <span class="text-red-500">Filipe Bicho </span> and I obtained my BA in computer science from the Universidade Aberta in Lisbon via distance learning.</p>
+
+<p><br />
+The main subjects on the course were computer science, mathematics and project management.</p>
+
+<p><br />
+During this time I acquired valuable experience that allowed me to develop my ability to solve<br />
+problems independently and efficiently.<br />
+&nbsp;</p>
+</div>
+
+<div id="skills">
+<h1 id="test">Skills</h1>
+
+<h2 id="front">Front-End</h2>
+
+<table class="skills_table">
+	<tbody>
+		<tr><!-- HTML -->
+			<td><img alt="html" class="lang_icon" src="images/homePage/icons/html.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="html" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+		<tr><!-- CSS -->
+			<td><img alt="css" class="lang_icon" src="images/homePage/icons/css.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="css" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+		<tr><!-- JavaScript -->
+			<td><img alt="js" class="lang_icon" src="images/homePage/icons/js.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="js" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+		<tr><!-- angularJS -->
+			<td><img alt="angular" class="lang_icon" src="images/homePage/icons/angularJS.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="angularJS" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+		<tr><!-- JQuery -->
+			<td><img alt="js" class="lang_icon" src="images/homePage/icons/jQuery.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="jquery" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="other">Other languages</h2>
+
+<table class="skills_table">
+	<tbody>
+		<tr><!-- Java -->
+			<td><img alt="java" class="lang_icon" src="images/homePage/icons/java.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="java" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+		<tr><!-- C -->
+			<td><img alt="C" class="lang_icon" src="images/homePage/icons/C.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="c" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+		<tr><!-- C++ -->
+			<td><img alt="c++" class="lang_icon" src="images/homePage/icons/c++.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="cPlus" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+		<tr><!-- MySQL -->
+			<td><img alt="sql" class="lang_icon" src="images/homePage/icons/sql.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="sql" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+		<tr style="padding-bottom: 50px"><!-- PHP -->
+			<td><img alt="php" class="lang_icon" src="images/homePage/icons/php.svg" /></td>
+			<td class="loading"><img alt="running" class="running" id="php" src="images/homePage/running.png" /></td>
+			<td><img alt="flag" class="flag" src="images/homePage/flag.png" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="height: 50px"></div>
+</div>
+</div>
+<!-- Footer -->
+
+<div id="footer"><!-- LinkedIn --><a href="https://ch.linkedin.com/in/filipe-bicho-7a668bb4"><img alt="linkedIn" id="linkedIn" src="images/icons/linkedin.png" /> </a> <!-- GitHub --> <a href="https://github.com/FilipeBicho"> <img alt="GitHub" id="github" src="images/icons/github.png" /> </a> <!-- Xing --> <a href="https://www.xing.com/profile/Filipe_Bicho?sc_o=mxb_p"> <img alt="Xing" id="xing" src="images/icons/xing.png" /> </a> <!-- Contact --> <a href="mailto:mail@filipebicho.com?Subject=Hello%20again" target="_top"> <img alt="contact" id="contact_icon" src="images/icons/contact.png" /> </a></div>
+</body>
+</html>
